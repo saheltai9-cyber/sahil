@@ -1,0 +1,24 @@
+{
+  "name": "civiclens-ai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "db:generate": "drizzle-kit generate",
+    "test": "node --test tests/*.test.mjs",
+    "predev": "npm run build",
+    "dev": "node --env-file-if-exists=.env scripts/local-server.mjs"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.31.11",
+    "drizzle-orm": "0.44.7",
+    "esbuild": "^0.28.2",
+    "happy-dom": "^20.14.6"
+  },
+  "dependencies": {
+    "firebase": "^13.0.0",
+    "jose": "^6.2.12",
+    "chart.js": "^4.4.0",
+    "jspdf": "^3.0.0"
+  }
+}
